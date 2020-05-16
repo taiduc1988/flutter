@@ -128,7 +128,8 @@ class Card extends HookWidget {
       child: Container(
           decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(15.0)), color: Colors.white),
           padding: EdgeInsets.all(5),
-          child: FittedBox(child: front ? Icon(FlutterIconData.octicons(61696 + id)) : Image.asset("back.png"))));
+//          child: FittedBox(child: front ? Icon(FlutterIconData.fontAwesome(61696 + id)) : Image.asset("back.png"))));
+          child: FittedBox(child: front ? Image.asset((id % 29).toString()+".png") : Image.asset("back.png"))));
 
   @override
   Widget build(BuildContext context) {
